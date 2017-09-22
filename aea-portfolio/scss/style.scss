@@ -25,7 +25,7 @@
 body {
 	margin: 0;
 	font-family: $main-font;
-	color: $charcoal;
+	color: $theme-black;
 }
 
 // hide until page fully loaded
@@ -33,13 +33,19 @@ body {
     display: none;
 }
 
-.page-content {
+.page-content-ctn {
+	
 	padding: 30px;
-	background-color: $green;
 
-	@include tablet {
-		padding: 30px 50px;
+	h2 {
+		text-align: center;
+		
+		span {
+			@include font-size($h2-font-sizes);
+			color: $purple;
+		}
 	}
+
 }
 
 p, li, a {

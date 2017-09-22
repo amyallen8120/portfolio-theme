@@ -1,204 +1,227 @@
-header {
-    width: 100%;
-    overflow: hidden;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 999;
-    padding: 0 50px;
-    text-align: center;
-    transition: all 0.3s;
+.content-wrapper {
 
     @include tablet {
-        height: 90px;
+        display: flex;
     }
 
-    .header__container {
-            
+    .sidebar-image {
+        
+        display: none;
+
         @include tablet {
-            @include flex(row, wrap, space-between, center);
-            line-height: 50px;
+            display: block;
+            position: fixed;
+            width: 50%;
+            min-height: 500px;  
+            height: 100vh;
+            background-image: url('img/portrait.jpg');
+            background-size: cover;
         }
 
-        .header__logo {
-            padding-top: 10px;
-            line-height: 0.5;
-
-            @include tablet {
-                padding-top: 0;
-            }
+        @include desktop {
+            width: 40%;  
         }
 
-        a {
-            text-decoration: none;
-            color: $charcoal;
+    }
+    
+    .page-content {
+
+        @include tablet {
+            width: 50%;
+            margin-left: auto;  
         }
 
-        .header__nav {
+        @include desktop {
+            width: 60%;  
+        }
+        
+        .header-wrapper {
 
-            ul {
-                padding-left: 0;
-                white-space: nowrap;
-            }
-
-            li {
-                display: block;
+            header {
+                width: 100%;
+                overflow: hidden;
+                position: fixed;
+                top: 0;
+                right: 0;
+                z-index: 999;
+                padding: 0 20px;
+                text-align: center;
+                transition: all 0.3s;
+                background-color: $purple;
 
                 @include tablet {
-                    display: inline;
+                    width: 50%;
+                    height: 75px;
+                    background-color: transparent;
+                    padding: 0 10px;
                 }
 
-                a {
-                    position: relative;
-                    transition: all 0.3s;  
+                @include desktop {
+                    width: 60%;
+                    padding: 0 50px;
+                }
 
+                .header__container {
+                      
                     @include tablet {
-                        margin-left: 30px;
+                        @include flex(row, wrap, space-between, center);
+                        height: 100%;
                     }
 
-                    &:hover {
-                        // color: $white;
+                    .header__logo {
+                        padding-top: 10px;
+                        line-height: 0.5;
 
-                        &::before {
-                            visibility: visible;
-                            transform: scaleX(1);
+                        @include tablet {
+                            padding-top: 0;
                         }
                     }
 
-                    &:before {
-                        content: "";
-                        position: absolute;
-                        width: 100%;
-                        height: 2px;
-                        bottom: 0;
-                        left: 0;
-                        background-color: $charcoal;
-                        visibility: hidden;
-                        transform: scaleX(0);
-                        transition: all 0.2s ease;
+                    a {
+                        text-decoration: none;
+                        color: $white;
+
+                        @include tablet {
+                            color: $purple;
+                        }
+                    }
+
+                    .header__nav {
+
+                        ul {
+                            padding-left: 0;
+                            white-space: nowrap;
+                        }
+
+                        li {
+                            display: block;
+                            margin-bottom: 8px;
+
+                            @include tablet {
+                                display: inline;
+                                margin-bottom: 0;
+                            }
+
+                            a {
+                                position: relative;
+                                transition: all 0.3s;  
+
+                                @include tablet {
+                                    margin-left: 30px;
+                                }
+
+                                &:hover {
+                                    // color: $white;
+
+                                    &::before {
+                                        visibility: visible;
+                                        transform: scaleX(1);
+                                    }
+                                }
+
+                                &:before {
+                                    content: "";
+                                    position: absolute;
+                                    width: 100%;
+                                    height: 2px;
+                                    bottom: 0;
+                                    left: 0;
+                                    background-color: $white;
+                                    visibility: hidden;
+                                    transform: scaleX(0);
+                                    transition: all 0.2s ease;
+
+                                    @include tablet {
+                                        background-color: $purple;
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
             }
-        }
-    }
-}
 
+            .header--scrolled {
+                background-color: $purple;
 
-.header--small {
-    margin-top: -15px;
+                a {
+                    color: $white !important;
 
-    @include tablet {
-        height: 75px;
-    }
-}
+                    &:before {
+                        background-color: $white !important;
+                    }
+                }
 
-.header--charcoal {
-    background-color: $charcoal;
-}
-
-.header--white-text {
-    a {
-        color: $white !important;
-    }
-}
-
-.hero-banner {
-
-    padding: 0 30px;
-    background-color: $green;
-
-    @include tablet {
-        padding: 0 50px;
-    }
-
-    .hero-banner__wrapper {
-        @include flex();
-        height: 100vh;
-        text-align: center;
-        
-        .hero-banner__main-heading {
+            }
             
-            margin: 20px 0;
+            .header__content {
+                
+                min-height: 400px;
+                height: 100vh;
+                position: relative;
+                background-image: url('img/portrait.jpg');
+                background-size: cover;
+                margin-top: 125px;
+                padding: 70px 30px;
 
-            h1 {
-                text-transform:uppercase;
+                @include tablet {
+                    background-image: none;
+                    min-height: 500px; 
+                    margin-top: 75px;
+                    padding: 50px 30px;
+                }
 
-                span {
+                @include desktop {
+                    padding: 70px 90px;
+                }
+            
+                .header__background-overlay {
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right:  0;
+                    background-color: rgba(96, 73, 90, 0.5);
+
+                    @include tablet {
+                        position: relative;
+                        background-color: none;
+                    }
+                }
+                
+                .header__content-text-ctn {
+                    
+                    position: relative;
                     color: $white;
+                    text-align: center;
+
+                    @include tablet {
+                        color: $theme-black;
+                        text-align: left;
+                    }
+
+                    h1 {
+
+                        margin-bottom: 20px;
+
+                        span {
+                            
+                            color: $theme-black;
+
+                            @include tablet {
+                                color: $light-purple;
+                            }
+                        }
+                    }
+
+                    h2 {
+                        max-width: 600px;
+                        @include font-size($h5-font-sizes);
+                        font-weight: 400;
+                    }
+
                 }
             }
         }
-
-        h2 {
-            @include font-size($h4-font-sizes);
-            max-width: 800px;
-            font-weight: 400;
-            margin: 0 auto 40px auto;
-            padding-bottm:  100px;
-        }
-    }  
-
-    svg {
-        stroke: $grey;
-        fill: $grey;
-        max-width: 60px;
-        height: auto;
-        position: absolute;
-        left: 0;
-        right: 0;
-        bottom: 10px;
-        margin: auto;
-        padding: 15px;
     }
-    .st0 {
-        fill:none;
-        stroke-width: 10px;
-        stroke-linecap: round;
-        &:first-of-type {
-            animation: drop 2s 1s infinite alternate;
-        }
-        &:nth-of-type(2) {
-            animation: drop 2s .5s infinite alternate;
-        }
-        &:nth-of-type(3) {
-            animation: drop 2s infinite alternate;
-        }
-    }
-
-    @keyframes drop {
-        100% {
-        opacity: 0;
-        transform: translateY(10px);
-        stroke-width: 0;
-        }
-    }
-}
-
-
-/* GLOBAL STYLES */
-.typewriter {
-    display: flex;
-    justify-content: center;
-}
-.typewriter h1 {
-    line-height: 1.2;
-  overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: 2px solid $charcoal; /* The typwriter cursor */
-  white-space: nowrap; /* Keeps the content on a single line */
-  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-  animation: 
-    typing 1s steps(15, end),
-    blink-caret .5s step-end infinite;
-}
-
-/* The typing effect */
-@keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
-}
-
-/* The typewriter cursor effect */
-@keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: $charcoal }
 }

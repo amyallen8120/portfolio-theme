@@ -1,8 +1,14 @@
 .footer {
-	background-color: $charcoal;
+
+	background-color: $dark-purple;
 	color: $white;
 	padding: 30px 50px;
 	text-align: center;
+
+	@include tablet {
+		width: 60%;
+		margin-left: auto;
+	}
 
 	.footer__icons {
 
@@ -17,7 +23,7 @@
 			}
 
 			&:hover {
-				color: $green;
+				color: $grey;
 			}
 		}
 	}

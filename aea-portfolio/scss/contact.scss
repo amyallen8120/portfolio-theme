@@ -5,12 +5,12 @@
 
 	.contact__information {
 		width: 100%;
-		border-bottom: 1px solid $charcoal;
+		border-bottom: 1px solid $dark-purple;
 
-		@include tablet {
+		@include desktop {
 			width: 35%;
 			border-bottom: none;
-			border-right: 1px solid $charcoal;
+			border-right: 1px solid $dark-purple;
 		}
 	}
 
@@ -18,7 +18,7 @@
 		width: 100%;
 		padding-top: 20px;
 
-		@include tablet {
+		@include desktop {
 			width: 65%;
 			padding-top: 0;
 			padding-left: 40px;
@@ -31,9 +31,9 @@
 		margin: 0 auto;
 
 		.btn {
-			background-color: $grey !important;
+			background-color: $purple !important;
 			color: $white !important;
-			border: 2px solid $grey !important;
+			border: 2px solid $purple !important;
 			padding: 0 20px !important;
 			line-height: 40px !important;
 			height: auto !important;
@@ -42,7 +42,7 @@
 
 			&:hover {
 				background-color: transparent !important;
-				color: $grey !important;
+				color: $theme-black !important;
 			}
 		}
 	}

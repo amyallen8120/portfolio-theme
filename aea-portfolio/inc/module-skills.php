@@ -1,6 +1,6 @@
 <section class="module__about module__skills">
 	
-	<h2>Skills</h2>
+	<h2>Skills<span>.</span></h2>
 	
 	<h3>Summary</h3>
 		

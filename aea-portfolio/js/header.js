@@ -5,18 +5,10 @@ window.addEventListener('scroll', function(e){
       shrinkOn = 100,
       header = $j("header");
   if (distanceY > shrinkOn) {
-      header.addClass('header--small');
-      header.addClass('header--charcoal');
-      header.addClass('header--white-text');
+      header.addClass('header--scrolled');
   } else {
-      if ( header.hasClass('header--small') ) {
-          header.removeClass('header--small');
-      }
-      if ( header.hasClass('header--charcoal') ) {
-          header.removeClass('header--charcoal');
-      }
-      if ( header.hasClass('header--white-text') ) {
-          header.removeClass('header--white-text');
+      if ( header.hasClass('header--scrolled') ) {
+          header.removeClass('header--scrolled');
       }
   }
 });

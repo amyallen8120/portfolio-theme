@@ -29,12 +29,12 @@ $desktop-width: 1024px;
 // colors
 $white: #fff;
 $black: #000;
-$grey: #4C6663;
-$charcoal: #3B413C;
-$green: #68FFCC;
-$green-light: #b6ffe6;
 
-
+$theme-black: #000022;
+$dark-purple: #2F2235;
+$purple: #3F3244;
+$light-purple: #60495A;
+$grey: #A9ACA9;
 
 // border radius
 $border-radius-card: 14px;
@@ -55,52 +55,52 @@ $regular-line-height: 1.6;
 
 $p-font-sizes: (
   null  : (14px, $mobile-line-height),
-  small : (16px, $regular-line-height),
-  medium: (16px, $regular-line-height),
-  large : (18px, $regular-line-height),
+  small : (14px, $regular-line-height),
+  medium: (14px, $regular-line-height),
+  large : (16px, $regular-line-height),
 );
 
 
 $h1-font-sizes: (
-  null  : (28px, $mobile-line-height),
-  small : (36px, $regular-line-height),
-  medium : (44px, $regular-line-height),
-  large: (48px, $regular-line-height)
+  null  : (42px, $mobile-line-height),
+  small : (48px, $regular-line-height),
+  medium : (56px, $regular-line-height),
+  large: (60px, $regular-line-height)
 );
 
 $h2-font-sizes: (
-  null  : (24px, $mobile-line-height),
-  small : (28px, $regular-line-height),
-  medium : (36px, $regular-line-height),
-  large: (40px, $regular-line-height)
+  null  : (28px, $mobile-line-height),
+  small : (32px, $regular-line-height),
+  medium : (40px, $regular-line-height),
+  large: (48px, $regular-line-height)
 );
 
 $h3-font-sizes: (
-  null  : (18px, $mobile-line-height),
-  small : (18px, $regular-line-height),
-  medium : (22px, $regular-line-height),
-  large: (24px, $regular-line-height)
+  null  : (24px, $mobile-line-height),
+  small : (26px, $regular-line-height),
+  medium : (28px, $regular-line-height),
+  large: (30px, $regular-line-height)
 );
 
 $h4-font-sizes: (
-  null  : (16px, $mobile-line-height),
-  small : (18px, $regular-line-height),
-  medium : (20px, $regular-line-height),
+  null  : (20px, $mobile-line-height),
+  small : (20px, $regular-line-height),
+  medium : (22px, $regular-line-height),
   large: (22px, $regular-line-height)
 );
 
 $h5-font-sizes: (
-  null  : (16px, $mobile-line-height),
+  null  : (18px, $mobile-line-height),
   small : (18px, $regular-line-height),
   medium : (20px, $regular-line-height),
-  large: (22px, $regular-line-height)
+  large: (20px, $regular-line-height)
 );
 
 $h6-font-sizes: (
   null  : (16px, $mobile-line-height),
-  small : (18px, $regular-line-height),
-  medium : (20px, $regular-line-height),
-  large: (22px, $regular-line-height)
+  small : (16px, $regular-line-height),
+  medium : (18px, $regular-line-height),
+  large: (18px, $regular-line-height)
 );
 
 @mixin font-size($fs-map, $fs-breakpoints: $breakpoints) {

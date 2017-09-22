@@ -8,10 +8,6 @@
 		}
 	}
 
-	h2 {
-		text-decoration: underline;
-	}
-
 	span {
 		@include font-size($p-font-sizes);
 	}
@@ -96,6 +92,11 @@
 
 			.module__experience-position, .module__education-degree {
 				display: inline;
+			}
+
+			.module__experience-period,.module__education-period {
+				font-style: italic;
+				margin-top: 5px;
 			}
 
 		}

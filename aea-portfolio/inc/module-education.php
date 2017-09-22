@@ -3,7 +3,7 @@ if ( have_rows( 'education' ) ): ?>
 
 <section class="module__about module__education">
 	
-	<h2>Education</h2>
+	<h2>Education<span>.</span></h2>
 
 	<?php while ( have_rows( 'education' ) ) : the_row();
 
@@ -13,9 +13,9 @@ if ( have_rows( 'education' ) ): ?>
 	$education_details = get_sub_field('education_details'); ?>
 
 	<div class="module__education-ctn">
-		<h3 class="module__education-degree"><?php echo $degree; ?>,</h3>
+		<h4 class="module__education-degree"><?php echo $degree; ?>,</h4>
 		<span class="module__education-school"><?php echo $school; ?>,</span>
-		<span class="module__education-period"><?php echo $education_period; ?></span>
+		<p class="module__education-period"><?php echo $education_period; ?></p>
 
 		<!-- <div class="module__education-details"><?php echo $education_details; ?></div> -->
 	</div>

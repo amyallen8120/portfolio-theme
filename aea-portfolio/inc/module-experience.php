@@ -4,7 +4,7 @@ if ( have_rows( 'experience' ) ): ?>
 
 <section class="module__about module__experience">
 	
-	<h2>Experience</h2>
+	<h2>Experience<span>.</span></h2>
 	
 	<?php while ( have_rows( 'experience' ) ) : the_row();
 
@@ -14,9 +14,9 @@ if ( have_rows( 'experience' ) ): ?>
 	$experience_details = get_sub_field('experience_details'); ?>
 	
 	<div class="module__experience-position-ctn">
-		<h3 class="module__experience-position"><?php echo $position; ?>,</h3>
+		<h4 class="module__experience-position"><?php echo $position; ?>,</h4>
 		<span class="module__experience-organization"><?php echo $organization; ?>,</span>
-		<span class="module__experience-period"><?php echo $experience_period; ?></span>
+		<p class="module__experience-period"><?php echo $experience_period; ?></p>
 
 		<div class="module__experience-details"><?php echo $experience_details; ?></div>
 	</div>

@@ -2,7 +2,7 @@
 
 <?php get_header(); ?>
 
-<div class="page-content">
+<div class="page-content-ctn">
 	
 	<div class="contact__wrapper">
 		<div class="contact__information">
