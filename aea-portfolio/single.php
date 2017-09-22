@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<div class="page-content">
+<div class="page-content-ctn">
 
 <?php echo the_content(); ?>
 
