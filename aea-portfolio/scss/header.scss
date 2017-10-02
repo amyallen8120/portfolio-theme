@@ -15,11 +15,13 @@
             min-height: 500px;  
             height: 100vh;
             background-image: url('img/portrait.jpg');
+            background-position: -60px;
             background-size: cover;
         }
 
         @include desktop {
             width: 40%;  
+            background-position: -20px;
         }
 
     }
